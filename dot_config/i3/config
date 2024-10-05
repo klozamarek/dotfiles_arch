@@ -208,6 +208,7 @@ mode "$mode_launcher" {
 assign [class="firefox" instance="Navigator"] $ws2
 assign [class="Brave-browser" instance="brave-browser"] $ws2
 assign [class="Min" instance="min"] $ws9
+assign [class="calibre" instance="calibre-gui"] $ws3
 #}}}
 #-- set $i3lockwall i3lock -i ~/Downloads/wallpaper.png {{{
 set $i3lockwall sh ~/.config/i3/scripts/lock.sh
@@ -277,6 +278,7 @@ for_window [class="feh"] floating enable
 
 workspace $ws1 output DisplayPort-1
 workspace $ws2 output DisplayPort-0
+workspace $ws3 output DisplayPort-0
 workspace $ws9 output DisplayPort-0
 #}}}
 #-- DESIGN {{{
@@ -350,5 +352,6 @@ bindsym $mod+control+shift+Print exec /home/ssserpent/.config/zsh/external/scree
 # }}}
 #-- launch apps on startup {{{
 exec --no-startup-id brave
+exec --no-startup-id calibre
 exec --no-startup-id kitty --session $XDG_CONFIG_HOME/kitty/session
 #}}}
